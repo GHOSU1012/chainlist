@@ -55,24 +55,6 @@
   margin-right: 24px !important;
 }
 
-.socials {
-  position: fixed;
-  bottom: 24px;
-}
-
-.socialButton {
-  display: flex;
-  align-items: center;
-}
-
-.sourceCode {
-  padding-left: 6px;
-}
-
-.version {
-  padding-left: 30px;
-}
-
 @media screen and (max-width: 900px) {
   .container {
     display: flex;
@@ -87,10 +69,5 @@
 
   .listContainer {
 
-  }
-
-  .socials {
-    position: relative;
-    margin-top: 2em;
   }
 }
