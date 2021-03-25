@@ -6,7 +6,6 @@ import Web3 from 'web3';
 import classes from './chain.module.css'
 
 import stores from '../../stores/index.js'
-import { getProvider } from '../../utils'
 
 import {
   ERROR,
@@ -47,15 +46,6 @@ export default function Chain({ chain }) {
     })
   }
 
-  const renderProviderText = () => {
-    const providerTextList = {
-      Metamask: 'Add to Metamask',
-      imToken: 'Add to imToken',
-      Wallet: 'Add to Wallet'
-    }
-    return providerTextList[getProvider()]
-  }
-
   if(!chain) {
     return <div></div>
   }
@@ -78,7 +68,7 @@ export default function Chain({ chain }) {
             color='primary'
             onClick={ addToNetwork }
           >
-            { renderProviderText() }
+            Add to Metamask
           </Button>
         </div>
       </Paper>
