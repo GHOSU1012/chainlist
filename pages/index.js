@@ -123,7 +123,7 @@ function Home({ chains, changeTheme, theme }) {
             <div className={ classes.copyCentered }>
               <Typography variant='h1' className={ classes.chainListSpacing }><span className={ classes.helpingUnderline }>Chainlist</span></Typography>
               <Typography variant='h2' className={ classes.helpingParagraph }>Helping users connect to EVM powered networks</Typography>
-              <Typography className={classes.subTitle}>Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
+              <Typography >Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
               <Button
                 size='large'
                 color='primary'
@@ -142,7 +142,7 @@ function Home({ chains, changeTheme, theme }) {
                 </svg>
                 <Typography variant='body1' className={ classes.sourceCode }>View Source Code</Typography>
               </a>
-              <Typography variant='subtitle1' className={ classes.version }>Version 1.0.3</Typography>
+              <Typography variant='subtitle1' className={ classes.version }>Version 1.0.4</Typography>
             </div>
           </div>
           <div className={ theme.palette.type === 'dark' ? classes.listContainerDark : classes.listContainer }>
@@ -186,8 +186,8 @@ function Home({ chains, changeTheme, theme }) {
                     chain.name.toLowerCase().includes(search.toLowerCase()) ||
                     (chain.nativeCurrency ? chain.nativeCurrency.symbol : '').toLowerCase().includes(search.toLowerCase()))
                   }
-                }).map((chain) => {
-                  return <Chain chain={ chain } />
+                }).map((chain, idx) => {
+                  return <Chain chain={ chain } key={ idx } />
                 })
               }
             </div>
