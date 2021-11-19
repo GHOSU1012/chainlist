@@ -106,11 +106,7 @@ export default function Chain({ chain }) {
           height={ 28 }
           className={ classes.avatar }
         />
-        <Typography variant='h3' className={ classes.name } noWrap>
-          <a href={ chain.infoURL } target="_blank" rel="noreferrer">
-            { chain.name }
-          </a>
-        </Typography>
+        <Typography variant='h3' className={ classes.name } noWrap>{ chain.name }</Typography>
       </div>
       <div className={ classes.chainInfoContainer }>
         <div className={ classes.dataPoint }>
